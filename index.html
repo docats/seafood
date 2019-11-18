@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>尚蓋青-每日限量 新鮮直送</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/myVue.js"></script>
+
+    
+     
+    
+
+</head>
+<body>
+    <!-- header start -->
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="尚蓋青"/></a>
+            </h1>
+
+            <div class="nav" id="nav">
+                <ul>
+                    <li v-for="navlist in toods"><a href="#"><img v-bind:src="navlist.path"/>&nbsp;{{navlist.text}}</a></li>
+                   
+                </ul>
+            </div>
+            <div class="menu" id="menu">
+                <ul>
+                        <li v-for="menu in toods_2"><a v-bind:href="menu.href">{{menu.text}}</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+ <!-- start end -->
+
+
+<!--手機版 輪播 -->
+
+
+    <div class="m_bn">
+        <div><img src="images/sample_1.jpg" /></div>
+        <div><img src="images/sample_2.jpg" /></div>
+        <div><img src="images/sample_3.jpg" /></div>
+    </div>
+
+
+<!--手機版 輪播 -->
+
+
+<!--手機版 開始-->
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <div class="container" onclick="burgerFun(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </a>
+        <div id="myLinks">
+
+            <ul class="topnav_list">
+                <li><i class="top-m fas fa-home"></i>&nbsp;&nbsp;<a href="index.html">首頁</a></li>
+                <li><i class="top-m fas fa-pen-square"></i>&nbsp;&nbsp;<a href="aboutus.html">關於我們</a></li>
+                <li><i class="top-m fas fa-external-link-square-alt"></i>&nbsp;&nbsp;<a href="news.html">最新消息</a></li>
+                <li><i class="top-m fab fa-product-hunt"></i>&nbsp;&nbsp;<a href="products.html">產品一覽</a></li>
+                <li><i class="top-m fas fa-bookmark"></i>&nbsp;&nbsp;<a href="know.html">四季魚類小知識</a></li>
+                <li><i class="top-m fas fa-mobile-alt"></i>&nbsp;&nbsp;<a href="contact.html">聯絡我們</a></li>
+                <li><i class="top-m fas fa-question-circle"></i>&nbsp;&nbsp;<a href="faq.html">常見問題</a></li>
+            </ul>
+            <ul class="social_icon">
+                <li><i class="top-m fab fa-facebook"></i><a href="#" atl="粉絲團"></a></li>
+                <li><i class="top-m fas fa-sign-in-alt"></i><a href="#" alt="會員登入"></a></li>
+                <li><i class="top-m fas fa-cart-arrow-down"></i><a href="#" alt="購物車"></a></li>
+            </ul>
+            <div class="myPic"></div>
+        </div>
+
+    </div>
+    <!-- End smartphone / tablet look -->
+</div>
+<!--手機板 結束-->
+
+
+
+<!-- 手機版  最新商品一覽 最新消息-->
+
+<div class="news_wrapper">
+    <div>
+        <div class="new_wp">
+            <h2>最新商品一覽</h2>
+            <div class="fish_item_m">
+                <div class="cont_fish_m">
+                    <img src="images/pic_01.png" alt="Avatar" class="image">
+                    <div class="overlay_m">
+                        <div class="text_m">
+                            <h3>台灣現撈軟絲</h3><br>
+                            <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                            <p>特價:300元</p>
+                            <p class="cart_m"><a href="#"><i class="fas fa-shopping-basket"></a></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_fish_m">
+                    <img src="images/pic_02.png" alt="Avatar" class="image">
+                    <div class="overlay_m">
+                        <div class="text_m">
+                            <h3>海鮮總匯</h3><br>
+                            <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                            <p>特價:300元</p>
+                            <p class="cart_m"><a href="#"><i class="fas fa-shopping-basket"></a></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_fish_m">
+                    <img src="images/pic_03.png" alt="Avatar" class="image">
+                    <div class="overlay_m">
+                        <div class="text_m">
+                            <h3>無敵生魚片</h3><br>
+                            <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                            <p>特價:300元</p>
+                            <p class="cart_m"><a href="#"><i class="fas fa-shopping-basket"></a></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="new_info" id="new_info">
+    <h2>{{message}}</h2>
+    <div class="new_word">
+        <a href="#"><img src="images/boat_time.png" alt="fish"></a>
+        <div class="news_moible">
+            <p>2019.05.23 <br />魚肉鮮嫩多汁的小秘訣</p>
+            <h3>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！</h3>
+            <div><a href="#">more</a></div>
+        </div>
+    </div>
+    <div class="new_word">
+
+        <div class="news_moible">
+            <p>2019.05.23 <br />魚肉鮮嫩多汁的小秘訣</p>
+            <h3>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！</h3>
+            <div><a href="#">more</a></div>
+        </div>
+    </div>
+    <div class="new_word">
+
+        <div class="news_moible">
+            <p>2019.05.23 <br />魚肉鮮嫩多汁的小秘訣</p>
+            <h3>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！</h3>
+            <div><a href="#">more</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- 手機版  最新商品一覽 最新消息-->
+
+
+    <!-- Banner 和最新商品一覽 -->
+    <div class="container">
+        <div class="banner"></div>
+    </div>
+    <div class="wrapper_list_bg" id="wrapper_list_bg">
+        <h2><img v-bind:src="new_list" alt="最新商品一覽" /></h2>
+
+
+
+    <div class="container">
+
+        <div class="fish_item">
+            <div class="cont_fish">
+                <img src="images/pic_01.png" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>生猛海鮮</h3>
+                            <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                            <p>特價:300元</p>
+                            <p class="cart"><a href="#"><i class="fas fa-shopping-basket"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fish_item">
+            <div class="cont_fish">
+                <img src="images/pic_02.png" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>生猛海鮮</h3>
+                        <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                        <p>特價:300元</p>
+                        <p class="cart"><a href="#"><i class="fas fa-shopping-basket"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fish_item">
+            <div class="cont_fish">
+                <img src="images/pic_03.png" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>生猛海鮮</h3>
+                        <p>好食讚釣魚台手釣活凍透抽250g/盒x10盒</p>
+                        <p>特價:300元</p>
+                        <p class="cart"><a href="#"><i class="fas fa-shopping-basket"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="clearfix"></div>
+
+    </div>
+<!-- Banner 和最新商品一覽 -->
+
+
+         <!-- 最新消息 star-->
+         <div class="container">
+            <h2><img src="images/news_a.png" alt="最新訊息"/></h2>
+            <div class="item_boat"><a href="#"><img src="images/boat_time.png" alt="fish"></a></div>
+            <div class="item_news">
+            <h5>2019.05.23</h5><br/><p>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！ <a href="#">more</a></p>
+            <h5>2019.05.23</h5><br/><p>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！ <a href="#">more</a></p>
+            <h5>2019.05.23</h5><br/><p>平均一個家庭每週會出現2道煎魚料理，如何把魚皮煎得完美無瑕、魚肉鮮嫩多汁，一直都是廣大媽媽們長久以來的困惑，現在，只需要幾個小撇步，就能輕鬆端出完美的煎魚料理！ <a href="#">more</a></p>
+            </div> 
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+ <!-- 最新消息 end-->
+
+
+    
+    <!-- 熱銷排行榜 start -->
+    <div class="wrapper_hotlist">
+        <div class="container">
+            <h2><img src="images/hot_list.png" alt="熱銷排行榜"></h2>
+            <div class="hot_fish">
+                <div class="sharp"></div>
+                <div class="box_fish"></div>
+                <div class="tag_wrap">
+                    <div class="tag">NO.1</div>
+                </div>
+                <div class="hot_con"><a href="#">宜蘭鯖魚</a>
+                </div>
+                <div class="buy_btn"><a href="#">快來搶購</a></div>
+            </div>
+    
+            <div class="hot_fish">
+                <div class="sharp"></div>
+                <div class="box_ball"></div>
+                <div class="tag_wrap">
+                    <div class="tag">NO.2</div>
+                </div>
+                <div class="hot_con"><a href="#">台南虱目魚丸</a></div>
+                <div class="buy_btn"><a href="#">快來搶購</a></div>
+            </div>
+    
+            <div class="hot_fish">
+                <div class="sharp"></div>
+                <div class="box_shap"></div>
+                <div class="tag_wrap">
+                    <div class="tag">NO.3</div>
+                </div>
+                <div class="hot_con"><a href="#">台灣甜蝦</a></div>
+                <div class="buy_btn"><a href="#">快來搶購</a></div>
+            </div>
+    
+            <div class="hot_fish">
+                <div class="sharp"></div>
+                <div class="box_sq"></div>
+                <div class="tag_wrap">
+                    <div class="tag">NO.4</div>
+                </div>
+                <div class="hot_con"><a href="#">澎湖花枝</a></div>
+                <div class="buy_btn"><a href="#">快來搶購</a></div>
+            </div>
+    
+            <div class="clearfix"></div>
+    
+        </div>
+    </div>
+    <!-- 熱銷排行榜 start -->
+
+   
+    <!-- 服務項目 start -->
+    <div class="wrapper_service">
+        <div class="jump_fish">
+            <img src="images/jamp_fist.png" alt="fish">
+        </div>
+        <div class="jump_crab">
+            <img src="images/jamp_crab.png" alt="crab">
+        </div>
+                <div class="container">
+                        <h2><img src="images/service.png" alt="服務項目"/></h2>
+                    <div class="item_fresh"> 
+                    <div class="item_sev"><a href="products.html"><img src="images/onlinebuy.png" alt="線上安心購物"></a></div>
+                    <div class="item_sev"><a href="know.html"><img src="images/cook.png" alt="安心食譜服務"></a></div>
+                    <div class="item_sev"><a href="aboutus.html"><img src="images/deliver.png" alt="新鮮海鮮直送"></a></div>
+                    <div class="clearfix"></div>
+                    </div> 
+                </div>
+        </div>  
+     <!-- 服務項目 end -->
+    
+    
+    
+    <!-- 手機版 footer start-->
+    <div class="wave_m"></div>
+    <div class="footer_wp_m">
+        <div class="footer_m_name">
+            <h2><img src="images/logo_name_m.png" alt="尚蓋青"/></h2>
+            <div class="footer_con_m">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <div class="clearfix"></div>
+                </ul>
+                <h3>copyright © 尚蓋青水產公司. All rights reserved.</h3>
+            </div>
+        </div>
+    </div>
+    <!-- 手機版 footer end-->
+
+
+    <!-- footer start -->
+    <div class="wave"></div>
+    <div class="wrapper_footer">
+        <div class="container_footer">
+            <div class="footer_name">
+                <h2><a href="index.html"><img src="images/logo_name.png" alt="尚蓋青"></a></h2>
+                <div class="footer_con">
+                    <ul>
+                    <li><a href="aboutus.html">關於我們 </a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li><a href="products.html">產品資訊</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li><a href="faq.html">常見問題FAQ</a></li>
+                    </ul>
+                    <h3>copyright © 尚蓋青水產公司. All rights reserved.</h3>
+                </div>
+    
+            </div>
+            <div class="footer_social">
+                <p><a href="#"><img src="images/ft_fb.png" alt="尚蓋青粉絲團"></a></p>
+                <p><a href="#"><img src="images/ft_ig.png" alt="ig"></a></p>
+                <p><a href="#"><img src="images/ft_yu.png" alt="youtube"></a></p>
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾 end -->
+    
+<script src="js/ac.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js" data-auto-replace-svg></script>
+<script>
+    $(function () {
+        $('.m_bn').slick();
+    });
+</script>
+
+</body>
+</html>
