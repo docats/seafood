@@ -40,26 +40,8 @@ function init(){
         }
     });
 
-    newsinfo=new Vue({
-        el:"#news_info",
-        data:{
-            pathimg:"./images/news_a.png"
-        }
-    });
-
-    item_news=new Vue({
-        el:"#item_news",
-        data:{
-            list:[
-                {date:"2019.05.23"},
-                {date:"2019.07.01"},
-                {date:"2020.10.21"},
-            ]
-        }
-    })
-  
    
 }
 
-var nav,menu,wrapper_list_bg,newsinfo,item_news;
+var nav,menu,new_info,wrapper_list_bg;
 
